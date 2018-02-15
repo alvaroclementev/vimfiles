@@ -1,8 +1,20 @@
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/vimfiles/bundle/Vundle.vim
+call vundle#begin('$HOME/vimfiles/bundle/')
+"Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+call vundle#end()
+
+filetype plugin indent on
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-set nocompatible
-filetype plugin indent on
+"Change default pointer to _vimrc
 let $MYVIMRC=$HOME.'\vimfiles\_vimrc'
 
 set diffexpr=MyDiff()
@@ -86,3 +98,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 let mapleader=" "
 "Map ,h to remove highlight when searching
 nnoremap <Leader>h :set hlsearch!<CR> 
+
+"NERDTree settings (make NERDTreeCWD the active buffer's directory)
+set autochdir
+let NERDTreeChDirMode=2
+nnoremap <Leader>n :NERDTree<CR>

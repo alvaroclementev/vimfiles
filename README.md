@@ -15,3 +15,16 @@ default).
 ```vim
 source ~\vimfiles\_vimrc
 ```
+
+### Plugins
+Vundle is configured in the _vimrc file, but needs to be installed manually in
+each new machine using this file. To install navigate to *$HOME\vimfiles* and
+run in cmd:
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ./bundle/Vundle.vim
+```
+
+After Vundle is installed, run from inside vim
+```vim
+:PluginInstall
+```
