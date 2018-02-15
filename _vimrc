@@ -8,6 +8,7 @@ call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'wincent/command-t'
 call vundle#end()
 
 filetype plugin indent on
