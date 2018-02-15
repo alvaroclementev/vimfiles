@@ -28,3 +28,8 @@ After Vundle is installed, run from inside vim
 ```vim
 :PluginInstall
 ```
+
+#### List of plugins installed
+  * **Vundle.vim**: Plugin manager
+  * **NERDTree**: Tree filesystem display
+  * **Command-T**: File fuzzy finder
