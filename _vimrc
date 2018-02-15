@@ -71,6 +71,7 @@ set softtabstop=4
 set expandtab
 
 set number
+set relativenumber
 "set cursor line "Uncomment to highlight current line
 
 set backspace=indent,eol,start
