@@ -52,6 +52,8 @@ endfunction
 syntax enable
 set background=dark
 silent! colorscheme solarized
+"Link system clipboard with unnamed buffer (regular copy and paste)
+set clipboard=unnamed
 
 "CONFIGURACION ESPECIFICA DE GVIM (Es posible que sea redundante... ya que este
 "archivo solo lo lee gVim... pero bueno
