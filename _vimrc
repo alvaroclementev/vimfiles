@@ -18,6 +18,9 @@ behave mswin
 "Change default pointer to _vimrc
 let $MYVIMRC=$HOME.'\vimfiles\_vimrc'
 
+"Ignore Files/Directories in Command-T
+set wildignore+=*/AppData/*
+
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
