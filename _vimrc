@@ -12,11 +12,10 @@ Plugin 'wincent/command-t'
 call vundle#end()
 
 filetype plugin indent on
-source $VIMRUNTIME/mswin.vim
-behave mswin
 
 "Change default pointer to _vimrc
 let $MYVIMRC=$HOME.'\vimfiles\_vimrc'
+let mapleader=" "
 
 "Ignore Files/Directories in Command-T
 set wildignore+=*/AppData/*
@@ -96,13 +95,19 @@ set foldnestmax=10
 nnoremap <space> za 
 set foldmethod=indent
 
+"Way to open files from currend directory
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 "Map j and k to move between virtual lines
 "(wrapped lines are not ignored)
 set textwidth=80
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-let mapleader=" "
 "Map ,h to remove highlight when searching
 nnoremap <Leader>h :set hlsearch!<CR> 
 
