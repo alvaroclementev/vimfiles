@@ -8,7 +8,7 @@ call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -17,7 +17,7 @@ filetype plugin indent on
 let $MYVIMRC=$HOME.'\vimfiles\_vimrc'
 let mapleader=" "
 
-"Ignore Files/Directories in Command-T
+"Ignore Files/Directories for Fuzzy Finders
 set wildignore+=*/AppData/*
 
 set diffexpr=MyDiff()
@@ -115,3 +115,12 @@ nnoremap <Leader>h :set hlsearch!<CR>
 set autochdir
 let NERDTreeChDirMode=2
 nnoremap <Leader>n :NERDTree<CR>
+
+"Ctrl-P Settings
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_working_path_mode='ra'
+"If a file is already open, open new file in new pane
+let g:ctrlp_switch_buffer='et'
+"To ignore files in .gitignore
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
