@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'chriskempson/base16-vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -53,7 +54,7 @@ endfunction
 "Taken form dougblack.io/words/a-good-vimrc.html
 syntax enable
 set background=dark
-silent! colorscheme solarized
+"silent! colorscheme solarized
 "Link system clipboard with unnamed buffer (regular copy and paste)
 set clipboard=unnamed
 
@@ -68,6 +69,7 @@ if has('gui_running')
     set backupdir=C:\Users\Alvaro\vimbackups
     "set where to store swapfiles
     set dir=C:\Users\Alvaro\vimbackups
+    colorscheme base16-ocean
 endif
 
 "Disable beeping
@@ -111,9 +113,11 @@ map <leader>et :tabe %%
 "Map j and k to move between virtual lines
 "(wrapped lines are not ignored)
 set textwidth=80
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
+"Map \v to turn very magic mode in searches and substitutions
+nnoremap / /\v
+nnoremap ? ?\v
+vnoremap / /\v
+vnoremap ? ?\v
 "Map ,h to remove highlight when searching
 nnoremap <Leader>h :set hlsearch!<CR> 
 
