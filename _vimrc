@@ -70,6 +70,12 @@ if has('gui_running')
     set dir=C:\Users\Alvaro\vimbackups
 endif
 
+"Disable beeping
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 set tabstop=4
 set softtabstop=4
 set expandtab
