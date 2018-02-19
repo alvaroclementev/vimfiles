@@ -109,7 +109,9 @@ map <leader>et :tabe %%
 set textwidth=80
 "Map \v to turn very magic mode in searches and substitutions
 nnoremap / /\v
+nnoremap ? ?\v
 vnoremap / /\v
+vnoremap ? ?\v
 "Map ,h to remove highlight when searching
 nnoremap <Leader>h :set hlsearch!<CR> 
 
